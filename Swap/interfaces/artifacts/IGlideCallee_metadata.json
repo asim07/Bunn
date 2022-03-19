@@ -1,0 +1,74 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "glideCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interfaces/IGlideCallee.sol": "IGlideCallee"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/IGlideCallee.sol": {
+			"keccak256": "0xbb6aa83e96dc3fe51d64f505325998b9925bfffb7fd654aab0a3536fcd045aed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d9e0dd93bd88cc9bc42ae87c83514d5cbe752421f071ccd27f1fa99608e003f",
+				"dweb:/ipfs/QmbiJ1DyFU6jMqRGrjXbMJr4vFAdAUPVzTHrsW5mE8WLcv"
+			]
+		}
+	},
+	"version": 1
+}
