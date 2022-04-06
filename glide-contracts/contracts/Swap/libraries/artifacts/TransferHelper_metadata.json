@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Swap/libraries/TransferHelper.sol": "TransferHelper"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 999
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Swap/libraries/TransferHelper.sol": {
+			"keccak256": "0x850ef5cc7bc65fd42989197a0a27cdec18a9f1db86d872ac541a4c8f8b39e33b",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://a911dc9eaf339e1bb366d318b83bccc3cf66c9981d904ba7e5705f80e06857f4",
+				"dweb:/ipfs/QmSr8Jb5S8qR6g4K81sdLgdiYn8E2vzMvHfDd1A5dFosvc"
+			]
+		}
+	},
+	"version": 1
+}

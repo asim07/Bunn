@@ -21,6 +21,8 @@
 const secrets = require('./secrets.json');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const mnemonic = secrets.mnemonic;
+require('dotenv').config()
+const PrivateKeyProvider = require("truffle-privatekey-provider");
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
@@ -62,7 +64,18 @@ module.exports = {
       ),
       gasLimit: 8000000,
       gasPrice: 1000000000
+    },
+    testela: {
+      host: 'https://api-testnet.elastos.io/eth',
+      port: 8545,
+      network_id: '*',
+      provider: () => new HDWalletProvider(
+        mnemonic, 'https://api-testnet.elastos.io/eth'
+      ),
+      gasLimit: 800000000,
+      gasPrice: 100000000000
     }
+
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -78,7 +91,7 @@ module.exports = {
       settings: {          // See the solidity docs for advice about optimization and evmVersion
        optimizer: {
         enabled: true, //TODO for deployment - change from true to false
-        runs: 200 //TODO for deployment - change from 200 to 1000
+        runs: 9999 //TODO for deployment - change from 200 to 1000
        },
         evmVersion: "constantinople"
       }
@@ -93,5 +106,8 @@ module.exports = {
 
   db: {
     enabled: false
-  }
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ]
 };

@@ -290,6 +290,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "test",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -378,8 +396,8 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
-			"runs": 200
+			"enabled": true,
+			"runs": 999
 		},
 		"remappings": []
 	},
@@ -441,11 +459,11 @@
 			]
 		},
 		"contracts/Dividends/FeeDistributor.sol": {
-			"keccak256": "0x798763dadeba20d416f51a7279c6b381dae66ed4e2d4bae7c15da7b8df6a931a",
+			"keccak256": "0x85a27e4bad8848f516a16faababa54ac794187c73e30eaaa1d6dbb4f2f78f54c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e60615ac9ebe1e1ac01e847dac3a15a17e366ff7e56adf7a31f675f67dffa715",
-				"dweb:/ipfs/QmRLZ3ycK2Em7TonnUp87K1DK62ANf8F3t3G59HkjaFoaB"
+				"bzz-raw://624f3e588d2c4ed64dc6a51cb0108dbcb70e0536f619299aaafe7ed34e8ca99f",
+				"dweb:/ipfs/QmbTZ34ohKTpv7Zbhwg2WbeQHwhqesah5L9nvgniZZZBuC"
 			]
 		},
 		"contracts/Dividends/interfaces/IFeeReceiver.sol": {

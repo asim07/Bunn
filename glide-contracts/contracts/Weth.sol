@@ -40,7 +40,7 @@ contract Weth {
     function withdraw(uint wad) public {
         require(balanceOf[msg.sender] >= wad, "");
         balanceOf[msg.sender] -= wad;
-        msg.sender.transfer(wad);
+        payable(msg.sender).transfer(wad);
         emit Withdrawal(msg.sender, wad);
     }
 
@@ -64,7 +64,7 @@ contract Weth {
     {
         require(balanceOf[src] >= wad, "");
 
-        if (src != msg.sender && allowance[src][msg.sender] != uint(-1)) {
+        if (src != msg.sender && allowance[src][msg.sender] != 0) {
             require(allowance[src][msg.sender] >= wad, "");
             allowance[src][msg.sender] -= wad;
         }

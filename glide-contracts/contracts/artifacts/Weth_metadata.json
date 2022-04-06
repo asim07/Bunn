@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.6.12+commit.27d51765"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -301,23 +301,23 @@
 		"compilationTarget": {
 			"contracts/Weth.sol": "Weth"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"contracts/Weth.sol": {
-			"keccak256": "0x0d856ce09532d5584a77f8860224816e4f0e3304aa285481ce2bd826fa94d2f4",
+			"keccak256": "0xcde1f0adf0fbccc175ac2a1e2ab64b0ae91a97c75b8b8b03957e84a1d50e3b8f",
 			"urls": [
-				"bzz-raw://aa6b6a16377d1d5d6a216dcbc108911720c91ea38bedfa71da855b7225ba7ac2",
-				"dweb:/ipfs/QmceCnGRPrkEnxgch2TobWwsigHsXk5kFqhA6Mmsu2Vgaj"
+				"bzz-raw://9b4662a6c7c8683b3547e9b9d408305a462079e545ba78787953fad705519adc",
+				"dweb:/ipfs/QmSCLrqEQVtxwzuFJmFpJ4cM3aWS3CbkKNHDA1U64JqTaQ"
 			]
 		}
 	},

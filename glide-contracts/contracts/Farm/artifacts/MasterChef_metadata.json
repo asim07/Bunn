@@ -878,7 +878,7 @@
 		},
 		"optimizer": {
 			"enabled": true,
-			"runs": 200
+			"runs": 999
 		},
 		"remappings": []
 	},
@@ -956,11 +956,11 @@
 			]
 		},
 		"contracts/Farm/MasterChef.sol": {
-			"keccak256": "0x14b3ccc352a06c2fbe55615083b46ed96d9e8a2c6f02d96b951c224aa815c03a",
+			"keccak256": "0x94d2e7931ced6e6533e3a45c431f6319ae78c9b57e49c3feaf198e89ea6bb3c6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b87d5708a359a1012cfcf72e08a231a5502c1cc852094dc54a8d924db57af5b7",
-				"dweb:/ipfs/QmWiqekGSh9TJrMgVAPVXxw7YqzqmVwQvBtJZ6VKziz5bk"
+				"bzz-raw://3d3575a54bbc625fadd9ec6f7a2a6c293a71e51c7daf3211555cad2fde561310",
+				"dweb:/ipfs/QmZDr1kPtZNboh26yaY1evz8bKnRGx3Jd8NMcUHBgSDBXy"
 			]
 		},
 		"contracts/Farm/Sugar.sol": {

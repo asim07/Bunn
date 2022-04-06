@@ -11,10 +11,10 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "./GlideToken.sol";
 import "./Sugar.sol";
 
-// MasterChef is the master of Glide. He can make Glide and he is a fair guy.
+// MasterChef is the master of Bunny. He can make Bunny and he is a fair guy.
 //
 // Note that it's ownable and the owner wields tremendous power. The ownership
-// will be transferred to a governance smart contract once GLIDE is sufficiently
+// will be transferred to a governance smart contract once Bunny is sufficiently
 // distributed and the community can show to govern itself.
 //
 // Have fun reading it. Hopefully it's bug-free. God bless.
@@ -27,13 +27,13 @@ contract MasterChef is Ownable, ReentrancyGuard {
         uint256 amount;     // How many LP tokens the user has provided.
         uint256 rewardDebt; // Reward debt. See explanation below.
         //
-        // We do some fancy math here. Basically, any point in time, the amount of GLIDEs
+        // We do some fancy math here. Basically, any point in time, the amount of Bunny
         // entitled to a user but is pending to be distributed is:
         //
-        //   pending reward = (user.amount * pool.accGlidePerShare).sub(user.rewardDebt)
+        //   pending reward = (user.amount * pool.accBunnyPerShare).sub(user.rewardDebt)
         //
         // Whenever a user deposits or withdraws LP tokens to a pool. Here's what happens:
-        //   1. The pool's `accGlidePerShare` (and `lastRewardBlock`) gets updated.
+        //   1. The pool's `accBunnyPerShare` (and `lastRewardBlock`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
         //   4. User's `rewardDebt` gets updated.
@@ -42,15 +42,15 @@ contract MasterChef is Ownable, ReentrancyGuard {
     // Info of each pool.
     struct PoolInfo {
         IERC20 lpToken;           // Address of LP token contract.
-        uint256 allocPoint;       // How many allocation points assigned to this pool. GLIDEs to distribute per block.
-        uint256 lastRewardBlock;  // Last block number that GLIDEs distribution occurs.
-        uint256 accGlidePerShare; // Accumulated GLIDEs per share, times 1e18. See below.
+        uint256 allocPoint;       // How many allocation points assigned to this pool. Bunny to distribute per block.
+        uint256 lastRewardBlock;  // Last block number that Bunny distribution occurs.
+        uint256 accGlidePerShare; // Accumulated Bunny per share, times 1e18. See below.
         uint256 lpSupply;
     }
 
-    // The GLIDE TOKEN!
+    // The BunnyTOKEN!
     BunnyToken public immutable glide;
-    // GLIDE TOKEN transfer owner
+    // Bunny TOKEN transfer owner
     address public glideTransferOwner;
 
     // The SUGAR TOKEN!
@@ -77,7 +77,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
     uint256 public totalAllocPoint = 0;
     // Max allocation points safety check
     uint256 public constant MAX_ALLOC_POINT = 100000;
-    // The block number when GLIDE mining starts.
+    // The block number when Bunny mining starts.
     uint256 public startBlock;
 
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
@@ -152,7 +152,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
         return phase(block.number);
     }
 
-    // get Glide token reward per block
+    // get Bunny token reward per block
     function rewardPerPhase(uint256 phaseNumber) public view returns (uint256) {
         // if larger than 25, it would be overflow error (also, in first 25 phase we will distribute all tokens)
         if (phaseNumber == 0 || phaseNumber > 25) {
@@ -452,7 +452,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
         emit UpdateEmissionRate(msg.sender, _glidePerBlock);
     }
 
-    // Update Glide transfer owner. Can only be called by existing glideTransferOwner
+    // Update Bunny transfer owner. Can only be called by existing BunnyTransferOwner
     function setGlideTransferOwner(address _glideTransferOwner) external {
         require(msg.sender == glideTransferOwner, "MasterChef: sender is not glide transfer owner");
         glideTransferOwner = _glideTransferOwner;
@@ -465,7 +465,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
      * AND TOKEN MIGRATION MUST HAPPEN
      */
     function transferGlideOwnership(address _newOwner) external {
-        require(msg.sender == glideTransferOwner, "MasterChef: sender is not glide transfer owner");
+        require(msg.sender == glideTransferOwner, "MasterChef: sender is not Bunny transfer owner");
         glide.transferOwnership(_newOwner);
         emit TransferGlideOwnership(msg.sender, _newOwner);
     }

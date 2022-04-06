@@ -68,6 +68,13 @@ contract FeeDistributor is Ownable {
 
         safeTokenTransfer(feeHolder, platformAmount);
     }
+     function test() external view returns(uint,uint) {
+         uint balance = 1 ether;
+        uint256 platformAmount = balance.mul(100).div(10000);
+        uint256 receiverAmount = balance.sub(platformAmount);
+        return (platformAmount,receiverAmount);
+       
+    }
 
     function safeTokenTransfer(address to, uint256 amount) internal {
         uint256 balance = IERC20(wElaAddress).balanceOf(address(this));
